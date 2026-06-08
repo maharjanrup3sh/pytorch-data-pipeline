@@ -13,7 +13,10 @@ from src.models.baseline_model import SimpleCNN
 from src.training.trainer import Trainer
 from src.utils.config_loader import load_config
 
+import sys
+from pathlib import Path
 
+sys.path.append(str(Path(__file__).resolve().parent))
 def main():
 
     # =========================================================
