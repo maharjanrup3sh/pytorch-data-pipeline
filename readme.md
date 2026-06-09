@@ -53,3 +53,43 @@ Used for:
 - Do NOT hardcode hyperparameters & Always use configuration files
 - Keep training code separate from model code
 - Use notebooks only for analysis and visualization
+
+
+
+## Student Submission — Rupesh Maharjan
+
+### Dataset: Flowers Recognition.
+
+# PyTorch Data Pipeline — Flowers Recognition
+
+## Dataset
+The dataset used for this assignment is the Flowers Recognition dataset downloaded 
+from Kaggle. It contains 4317 images organized into 5 classes: daisy, dandelion, 
+rose, sunflower, and tulip. Each class is stored in its own folder, which allowed 
+the custom Dataset class to automatically discover and label them without any 
+hardcoding.
+
+## Challenges Faced
+The most challenging part of this assignment was working inside a cloned repository 
+for the first time. Understanding the project structure and knowing where to write 
+code was difficult at first, but gradually made sense as I worked through each file. 
+One specific issue I faced was forgetting to place the dataset inside the train/ 
+folder, which caused the Dataset to detect the wrong folder structure and find 0 
+images. This was fixed by reorganizing the folders correctly and updating the path 
+in the code.
+
+## Dataset vs DataLoader
+The way I understand it, the Dataset class is like a file management system — it 
+organizes all the images in order so that any single image can be retrieved quickly 
+and efficiently when needed. The DataLoader on the other hand is like deciding how 
+much of that data you want to feed at a time during training — it controls the batch 
+size, shuffles the data randomly each epoch, and handles loading in the background 
+so training runs smoothly.
+
+## Setup Instructions
+1. Clone the repository
+2. Run: conda env create -f environment.yaml
+3. Run: conda activate dl-workshop
+4. Download Flowers Recognition dataset from Kaggle
+5. Place it in raw_data/flowers/train/
+6. Open notebooks/data_pipeline.ipynb and run all cells
